@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  bar:
+    image: unknownboy666/alpine-dev-motd:latest
+    command: sh -c "sed -i '$$ a TU ME VOIS HEIN ? JE SUIS LA LIGNE RAJOUTEE !' /home/dev/project/motd && cat /home/dev/project/motd && cp /home/dev/project/motd /tmp/motd"
+    volumes:
+      - ./shared_folder:/tmp
